@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "embodied-agent"
+version = "1.0.0"
+requires-python = ">=3.10"
+dependencies = ["jsonschema>=4.18,<5"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9"]
+
+[tool.setuptools.packages.find]
+include = ["planner*", "day4*", "scenes*", "reliability*", "replay*"]
+
+[tool.setuptools.package-data]
+planner = ["schemas/*.json"]
+reliability = ["native/*.cc", "native/*.hh", "native/CMakeLists.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra"

@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "scene_id": "turtlebot3_demo",
+  "frame_id": "map",
+  "created_at": "2026-11-08T10:13:34.165116+00:00",
+  "status": "READY",
+  "steps": [
+    {
+      "step_id": 1,
+      "action": "NAVIGATE",
+      "location": "A区",
+      "x": 0.419,
+      "y": -1.822
+    },
+    {
+      "step_id": 2,
+      "action": "NAVIGATE",
+      "location": "B区",
+      "x": -0.302,
+      "y": 0.459
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="760" viewBox="0 0 900 760">
+  <rect x="0" y="0" width="900" height="760" fill="white" />
+  <text x="35" y="30" font-size="20" fill="#17212b">inspection_world v1 — authored geometry / static checks only</text>
+  <rect x="93.99999999999997" y="423.99999999999994" width="342.00000000000006" height="207.00000000000006" fill="rgb(63,102,191)" opacity="0.18" />
+  <rect x="445.0" y="423.99999999999994" width="351.00000000000006" height="207.00000000000006" fill="rgb(165,140,63)" opacity="0.18" />
+  <rect x="93.99999999999997" y="108.99999999999997" width="342.00000000000006" height="207.00000000000006" fill="rgb(63,165,102)" opacity="0.18" />
+  <rect x="445.0" y="108.99999999999997" width="351.00000000000006" height="207.00000000000006" fill="rgb(165,89,140)" opacity="0.18" />
+  <rect x="85.0" y="631.0" width="720" height="8.999999999999968" fill="#333e49" />
+  <rect x="85.0" y="100" width="720" height="8.999999999999968" fill="#333e49" />
+  <rect x="85.0" y="108.99999999999997" width="8.999999999999968" height="522.0000000000001" fill="#333e49" />
+  <rect x="796.0" y="108.99999999999997" width="8.999999999999968" height="522.0000000000001" fill="#333e49" />
+  <rect x="93.99999999999997" y="415" width="126.00000000000003" height="8.999999999999968" fill="#333e49" />
+  <rect x="310.0" y="415" width="225" height="8.999999999999968" fill="#333e49" />
+  <rect x="625.0" y="415" width="171.00000000000003" height="8.999999999999968" fill="#333e49" />
+  <rect x="93.99999999999997" y="316.00000000000006" width="126.00000000000003" height="8.999999999999968" fill="#333e49" />
+  <rect x="310.0" y="316.00000000000006" width="225" height="8.999999999999968" fill="#333e49" />
+  <rect x="625.0" y="316.00000000000006" width="171.00000000000003" height="8.999999999999968" fill="#333e49" />
+  <rect x="436.00000000000006" y="423.99999999999994" width="8.999999999999968" height="207.00000000000006" fill="#333e49" />
+  <rect x="436.00000000000006" y="108.99999999999997" width="8.999999999999968" height="207.00000000000006" fill="#333e49" />
+  <rect x="130.0" y="541.0" width="45" height="53.99999999999997" fill="#333e49" />
+  <rect x="683.5" y="541.0" width="62.999999999999936" height="53.99999999999997" fill="#333e49" />
+  <rect x="130.0" y="158.50000000000003" width="67.5" height="53.99999999999997" fill="#333e49" />
+  <rect x="692.5" y="167.5" width="45.0" height="67.5" fill="#333e49" />
+  <circle cx="287.5" cy="527.5" r="6" fill="#1769cf" stroke="white" stroke-width="2" />
+  <text x="297.5" y="517.5" font-size="18" fill="#17212b">配电间</text>
+  <circle cx="602.5" cy="527.5" r="6" fill="#1769cf" stroke="white" stroke-width="2" />
+  <text x="612.5" y="517.5" font-size="18" fill="#17212b">仓储间</text>
+  <circle cx="287.5" cy="212.5" r="6" fill="#1769cf" stroke="white" stroke-width="2" />
+  <text x="297.5" y="202.5" font-size="18" fill="#17212b">机房</text>
+  <circle cx="602.5" cy="212.5" r="6" fill="#1769cf" stroke="white" stroke-width="2" />
+  <text x="612.5" y="202.5" font-size="18" fill="#17212b">巡检站</text>
+  <circle cx="152.5" cy="370.0" r="7" fill="#17914c" />
+  <text x="137.5" y="395.0" font-size="15" fill="#126334">spawn</text>
+  <text x="350" y="365" font-size="15" fill="#455362">2 m corridor / doors</text>
+  <text x="35" y="725" font-size="17" fill="#455362">Map 360×280 | 0.05 m/cell | origin (9,19) | 0.45 m static clearance</text>
+</svg>

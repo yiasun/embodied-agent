@@ -1,0 +1,239 @@
+{
+  "geometry_version": "axis-aligned-indoor-v1",
+  "scene_id": "inspection_world",
+  "revision": "1.0.0",
+  "world_name": "default",
+  "map": {
+    "resolution": 0.05,
+    "origin": [
+      9.0,
+      19.0,
+      0.0
+    ],
+    "width": 360,
+    "height": 280
+  },
+  "clearance_m": 0.45,
+  "robot_radius_m": 0.22,
+  "wall_height": 2.0,
+  "spawn": {
+    "x": 11.5,
+    "y": 26.0,
+    "z": 0.01,
+    "yaw": 0.0
+  },
+  "waypoints": {
+    "配电间": {
+      "x": 14.5,
+      "y": 22.5,
+      "description": "西南配电间巡检位"
+    },
+    "仓储间": {
+      "x": 21.5,
+      "y": 22.5,
+      "description": "东南仓储间巡检位"
+    },
+    "机房": {
+      "x": 14.5,
+      "y": 29.5,
+      "description": "西北机房巡检位"
+    },
+    "巡检站": {
+      "x": 21.5,
+      "y": 29.5,
+      "description": "东北巡检站"
+    }
+  },
+  "boxes": [
+    {
+      "name": "south_wall",
+      "bounds": [
+        10,
+        20,
+        26,
+        20.2
+      ]
+    },
+    {
+      "name": "north_wall",
+      "bounds": [
+        10,
+        31.8,
+        26,
+        32
+      ]
+    },
+    {
+      "name": "west_wall",
+      "bounds": [
+        10,
+        20.2,
+        10.2,
+        31.8
+      ]
+    },
+    {
+      "name": "east_wall",
+      "bounds": [
+        25.8,
+        20.2,
+        26,
+        31.8
+      ]
+    },
+    {
+      "name": "south_partition_w",
+      "bounds": [
+        10.2,
+        24.8,
+        13,
+        25
+      ]
+    },
+    {
+      "name": "south_partition_mid",
+      "bounds": [
+        15,
+        24.8,
+        20,
+        25
+      ]
+    },
+    {
+      "name": "south_partition_e",
+      "bounds": [
+        22,
+        24.8,
+        25.8,
+        25
+      ]
+    },
+    {
+      "name": "north_partition_w",
+      "bounds": [
+        10.2,
+        27,
+        13,
+        27.2
+      ]
+    },
+    {
+      "name": "north_partition_mid",
+      "bounds": [
+        15,
+        27,
+        20,
+        27.2
+      ]
+    },
+    {
+      "name": "north_partition_e",
+      "bounds": [
+        22,
+        27,
+        25.8,
+        27.2
+      ]
+    },
+    {
+      "name": "south_room_divider",
+      "bounds": [
+        17.8,
+        20.2,
+        18,
+        24.8
+      ]
+    },
+    {
+      "name": "north_room_divider",
+      "bounds": [
+        17.8,
+        27.2,
+        18,
+        31.8
+      ]
+    },
+    {
+      "name": "electrical_cabinet",
+      "bounds": [
+        11,
+        21,
+        12,
+        22.2
+      ],
+      "height": 1.2
+    },
+    {
+      "name": "storage_rack",
+      "bounds": [
+        23.3,
+        21,
+        24.7,
+        22.2
+      ],
+      "height": 1.2
+    },
+    {
+      "name": "server_rack",
+      "bounds": [
+        11,
+        29.5,
+        12.5,
+        30.7
+      ],
+      "height": 1.2
+    },
+    {
+      "name": "inspection_equipment",
+      "bounds": [
+        23.5,
+        29,
+        24.5,
+        30.5
+      ],
+      "height": 1.2
+    }
+  ],
+  "regions": [
+    {
+      "name": "southwest",
+      "bounds": [
+        10.2,
+        20.2,
+        17.8,
+        24.8
+      ],
+      "color": "0.25 0.40 0.75 1"
+    },
+    {
+      "name": "southeast",
+      "bounds": [
+        18,
+        20.2,
+        25.8,
+        24.8
+      ],
+      "color": "0.65 0.55 0.25 1"
+    },
+    {
+      "name": "northwest",
+      "bounds": [
+        10.2,
+        27.2,
+        17.8,
+        31.8
+      ],
+      "color": "0.25 0.65 0.40 1"
+    },
+    {
+      "name": "northeast",
+      "bounds": [
+        18,
+        27.2,
+        25.8,
+        31.8
+      ],
+      "color": "0.65 0.35 0.55 1"
+    }
+  ]
+}

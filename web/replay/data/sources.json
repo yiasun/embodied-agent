@@ -1,0 +1,104 @@
+[
+  {
+    "experiment": "D1",
+    "role": "evaluation",
+    "file": "D1_retry_20261109_122902_735173165.json",
+    "sha256": "ae09075d440313f6a1e0cf587200289252f5cf5e29c3ce3a9ab415fbcc82b3f2"
+  },
+  {
+    "experiment": "D1",
+    "role": "final_navigation",
+    "file": "task_v4_da23b2b26cd1492fb798b59b94dee77e.json",
+    "sha256": "1f4e6c0215150c1ec47f2c174d75e5ecf234fd66c4d95a509eecfc9610723eb6"
+  },
+  {
+    "experiment": "D2",
+    "role": "evaluation",
+    "file": "D2_handshake_20261109_140727_574372922_metrics_final.json",
+    "sha256": "3531c38549ffe870b44dd8b8dff5f566734a8a361a7365f1e6e1d128b3e7262e"
+  },
+  {
+    "experiment": "D2",
+    "role": "final_navigation",
+    "file": "task_v4_6cbabd91908f496389b4b38a7e06d6d3.json",
+    "sha256": "24dcb4a3a556c34a32c86c72471c1289fb8988bdf48aa9a3a4642ef8aa214921"
+  },
+  {
+    "experiment": "D2",
+    "role": "observation_before_finalization",
+    "file": "D2_handshake_20261109_140727_574372922_metrics.json",
+    "sha256": "b020d8f8f31fd2b7529b71bea30430d2cd4785217ce711a66f117bb4d39a23e0"
+  },
+  {
+    "experiment": "D2",
+    "role": "obstacle_journal",
+    "file": "D2_handshake_20261109_140727_574372922.json",
+    "sha256": "012b1bdd250e454f4a85ec2e3239d8167ef8762b6ed293af0b7447a867a359e9"
+  },
+  {
+    "experiment": "D3",
+    "role": "evaluation",
+    "file": "D3_heartbeat_20261109_170747_737199338_metrics_final.json",
+    "sha256": "98a57e0ef7b3c858db6fbc85fc956c6d2d8739ab631af645101e92244ec1047e"
+  },
+  {
+    "experiment": "D3",
+    "role": "final_navigation",
+    "file": "task_v4_d15c3309d9024ceda4e161e08aa407da.json",
+    "sha256": "526cc9a46de81936aeb680ee3bc205a31c8a5d2a77faf4d46909da49001f69b8"
+  },
+  {
+    "experiment": "D3",
+    "role": "observation_before_finalization",
+    "file": "D3_heartbeat_20261109_170747_737199338_metrics.json",
+    "sha256": "32f9b7956c74a9d865d6672caddf559aef341e2277edbaa5e9e3877aad746fab"
+  },
+  {
+    "experiment": "D3",
+    "role": "obstacle_journal",
+    "file": "D3_heartbeat_20261109_170747_737199338.json",
+    "sha256": "4bfd78d24287f389079f3b07039fd4eda3d415fe3725c2addc06193ae22ca4fb"
+  },
+  {
+    "experiment": "ALL",
+    "role": "scene_registry",
+    "file": "inspection_world.json",
+    "sha256": "da88d212016541ee25b8bff00ec3a9d1974f45e1954bd756c21bab6f699a031b"
+  },
+  {
+    "experiment": "ALL",
+    "role": "asset_geometry",
+    "file": "geometry.json",
+    "sha256": "e1480f8549c62155e94d9a3b7486a29db87f12103f3b88d4722d7f7b97c2b5c6"
+  },
+  {
+    "experiment": "ALL",
+    "role": "asset_nav2_template",
+    "file": "nav2_template.json",
+    "sha256": "1e380ede66ef7262a5479cd1f9e913e18c9a944a15b05a040a2177c7dda0ba31"
+  },
+  {
+    "experiment": "ALL",
+    "role": "asset_world",
+    "file": "inspection_world.sdf",
+    "sha256": "cbbde11dca1a1f71b4102cf5e04f7cd6396dd2c427e046c8f41c6fa28c92ab40"
+  },
+  {
+    "experiment": "ALL",
+    "role": "asset_map",
+    "file": "inspection_world.yaml",
+    "sha256": "9c872739becb44e3626a96f0e4a02e673a4e7806858b0b7fd9f4934cc73c6785"
+  },
+  {
+    "experiment": "ALL",
+    "role": "asset_map_image",
+    "file": "inspection_world.pgm",
+    "sha256": "06f0eb4a0de8a5d2676e886015b37457b6c4d142bd152ce0cb2a97a8b4a13f80"
+  },
+  {
+    "experiment": "ALL",
+    "role": "asset_nav2_params",
+    "file": "nav2_params.yaml",
+    "sha256": "8087b9c00967cf0b8076f9ffff3c7096d77bd479944f5a6877907d598b233603"
+  }
+]

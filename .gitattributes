@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.png binary
+*.pgm binary
+# Manifest-pinned scene bytes must survive cross-platform checkouts unchanged.
+assets/scenes/** -text

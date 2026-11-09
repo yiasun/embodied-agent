@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scene_id",
+    "frame_id",
+    "created_at",
+    "status",
+    "steps",
+    "scene_assets"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "2.0"
+    },
+    "scene_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$"
+    },
+    "frame_id": {
+      "const": "map"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "const": "READY"
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "step_id",
+          "action",
+          "location",
+          "x",
+          "y"
+        ],
+        "properties": {
+          "step_id": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20
+          },
+          "action": {
+            "const": "NAVIGATE"
+          },
+          "location": {
+            "type": "string",
+            "minLength": 1
+          },
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "scene_assets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "revision",
+        "manifest_sha256"
+      ],
+      "properties": {
+        "revision": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "manifest_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "scene_id": "turtlebot3_demo",
+  "description": "TurtleBot3基础导航仿真场景",
+  "frame_id": "map",
+  "waypoints": {
+    "A区": {
+      "x": 0.419,
+      "y": -1.822,
+      "description": "测试地点A"
+    },
+    "B区": {
+      "x": -0.302,
+      "y": 0.459,
+      "description": "测试地点B"
+    }
+  }
+}

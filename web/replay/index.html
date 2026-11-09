@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Embodied-Agent · 实验证据回放</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="evidence.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<aside class="rail">
+  <a class="brand" href="#overview"><span class="brand-icon">e<span>a</span></span><span>EMBODIED<br><b>AGENT LAB</b></span></a>
+  <p class="rail-label">EXPERIMENT NOTEBOOK</p>
+  <nav aria-label="页面导航">
+    <a href="#overview">01 <span>实验概览</span></a>
+    <a href="#replay">02 <span>轨迹回放</span></a>
+    <a href="#analytics">03 <span>运动分析</span></a>
+    <a href="#safety">04 <span>安全事件</span></a>
+    <a href="#evidence">05 <span>证据与边界</span></a>
+  </nav>
+  <div class="rail-foot"><span class="dot"></span> 离线历史数据<br><small>Inspection World · v1.0.0<br>2026.11.09 / Stage 6.2</small></div>
+</aside>
+<main>
+  <header class="topline"><span>RESEARCH / NAVIGATION RELIABILITY</span><span class="badge">LOCAL REPLAY · READ ONLY</span></header>
+  <section id="overview">
+    <div class="eyebrow">STAGE 6.2 / EXPERIMENT OVERVIEW</div>
+    <h1>让每一次避障，<br><span>都有证据可循。</span></h1>
+    <p class="intro">连续运动障碍下的巡检导航实验。回看真实采样的轨迹、减速与安全停止，保留实验结果的完整边界。</p>
+    <div class="experiment-select" role="group" aria-label="选择历史实验">
+      <button data-experiment="D1" aria-pressed="false">D1 <span>无障碍基线</span></button>
+      <button data-experiment="D2" aria-pressed="false">D2 <span>单向运动</span></button>
+      <button data-experiment="D3" aria-pressed="true">D3 <span>往返运动</span></button>
+    </div>
+    <div id="summary" class="summary-grid" aria-live="polite"></div>
+    <div class="notice" id="verdict"></div>
+    <div class="section-heading"><h2>四站任务结果</h2><span>最终 V4 报告 · 非同步回放状态</span></div>
+    <div id="tasks" class="task-grid"></div>
+    <details class="comparison"><summary>展开 D1 / D2 / D3 实验对照</summary><div class="table-scroll"><table id="comparison-table"></table></div><p class="fine">单次独立实验，初始条件不同。任务时长为墙钟时间；轨迹与障碍时长为仿真时间。</p></details>
+  </section>
+  <section id="replay">
+    <div class="section-heading"><div><div class="eyebrow">02 / TRAJECTORY REPLAY</div><h2>在空间中，读懂行为</h2></div><button id="zoom" class="subtle" aria-pressed="false">局部放大</button></div>
+    <div class="replay-panel">
+      <div class="map-top"><span><b id="replay-name">D3</b> · 第3站 / Gazebo world</span><span class="sample-badge" id="sample-state"></span></div>
+      <svg id="map" viewBox="9.5 -32.5 17 13.5" role="img" aria-label="真实地图几何与第3站观测轨迹"></svg>
+      <div class="legend"><span class="key d1">D1已观测参考轨迹</span><span class="key d3">所选实验已观测轨迹</span><span class="key obstacle">障碍实体</span><span class="key projected">D1最近空间投影（非同步机器人）</span></div>
+      <div class="playback">
+        <button id="play" aria-label="播放历史轨迹">播放</button>
+        <label class="sr-only" for="timeline">观测窗口相对仿真时间</label><input id="timeline" type="range" min="0" max="21" value="0" step="0.001">
+        <output id="clock" for="timeline">0.000 s</output>
+        <label class="sr-only" for="rate">回放倍速</label><select id="rate"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select>
+      </div>
+      <div class="telemetry" id="telemetry"></div>
+    </div>
+    <p class="fine">滑动时间轴查看最近的已记录帧，不插值、不外推。D1/D3按同一任务与空间投影对齐，不能按绝对仿真时间视为同步。观测结束后的导航没有轨迹补写。</p>
+  </section>
+  <section id="analytics">
+    <div class="section-heading"><div><div class="eyebrow">03 / MOTION ANALYTICS</div><h2>从曲线，到可复算的指标</h2></div></div>
+    <div class="chart-grid">
+      <article class="chart-card wide"><div class="chart-title"><h3>速度 × 空间进度</h3><span>位姿差分 · m/s</span></div><svg id="speed-chart" viewBox="0 0 660 235" role="img" aria-label="D1与所选实验速度按D1参考折线空间对齐"></svg><p>横轴：D1第3站参考折线最近投影弧长（m），不是同步时间；投影可回退。相同X区间16.5–17.0m：<b>D1 0.46031 / D3 0.14418m/s</b>，描述性降低68.68%。</p></article>
+      <article class="chart-card"><div class="chart-title"><h3>相对D1的空间偏移</h3><span>单向最近距离 · m</span></div><svg id="deviation-chart" viewBox="0 0 660 235" role="img" aria-label="采样点到D1有效参考折线的最近距离"></svg><p>横轴为参考空间弧长；不是与D1同一时刻的位置差，也不代表连续轨迹的最大值。</p></article>
+      <article class="chart-card"><div class="chart-title"><h3>机器人—障碍净距</h3><span>保守几何模型 · m</span></div><svg id="clearance-chart" viewBox="0 0 660 235" role="img" aria-label="机器人与障碍几何净距随所选实验相对仿真时间变化"></svg><p>横轴为本次观测相对仿真秒。半径0.22m保守圆与障碍矩形；虚线为0.35m门禁。D1无注入障碍，净距不适用。</p></article>
+    </div>
+  </section>
+  <section id="safety">
+    <div class="section-heading"><div><div class="eyebrow">04 / SAFETY EVENTS</div><h2>停止，也是实验结果</h2></div><span class="badge warning">CONTACT · NOT_MEASURED</span></div>
+    <div id="events"></div>
+    <p class="fine">Nav2内部恢复事件与V4任务级决策分别记录；原生障碍安全门禁停止不等于Agent自主恢复。Path变化仅为代理指标，不表示正式重规划次数。</p>
+  </section>
+  <section id="evidence">
+    <div class="section-heading"><div><div class="eyebrow">05 / EVIDENCE & LIMITATIONS</div><h2>可追溯，也承认未知</h2></div></div>
+    <div class="evidence-grid"><article class="card"><h3>证据链</h3><p>可信计划 → 最终V4报告 → 观测数据 → 本页派生指标。构建时重新核验计划、来源、运行、租约及场景资产关联。</p><dl id="identity"></dl><a class="download" href="data/evidence.json" download>下载脱敏回放 JSON ↗</a><a class="download" href="data/sources.json" download>下载原始文件名与 SHA-256 清单 ↗</a><p class="fine">下载内容为派生白名单数据；没有原始报告、所有权凭证、绝对路径、环境变量或API密钥。原始记录保留在本地项目。</p></article><article class="card"><h3>测量、计算与结论边界</h3><ul id="limitations"></ul></article></div>
+    <details><summary>原始报告与派生数据对应关系</summary><div id="sources" class="source-list"></div></details>
+  </section>
+  <footer>EMBODIED-AGENT / OFFLINE EVIDENCE STUDIO <span>无网络请求 · 无机器人控制 · 原始记录保留</span></footer>
+</main>
+<noscript>本地历史回放需要启用JavaScript。可直接阅读 docs/STAGE62_RESULTS.md。</noscript>
+</body>
+</html>

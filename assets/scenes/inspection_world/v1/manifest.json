@@ -1,0 +1,38 @@
+{
+  "asset_schema_version": "1.0",
+  "scene_id": "inspection_world",
+  "revision": "1.0.0",
+  "profile": "axis-aligned-indoor-v1",
+  "map_to_world": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "verification_level": "offline-geometry-and-connectivity-only",
+  "files": {
+    "geometry": {
+      "path": "assets/scenes/inspection_world/v1/geometry.json",
+      "sha256": "e1480f8549c62155e94d9a3b7486a29db87f12103f3b88d4722d7f7b97c2b5c6"
+    },
+    "nav2_template": {
+      "path": "assets/scenes/inspection_world/v1/nav2_template.json",
+      "sha256": "1e380ede66ef7262a5479cd1f9e913e18c9a944a15b05a040a2177c7dda0ba31"
+    },
+    "world": {
+      "path": "assets/scenes/inspection_world/v1/inspection_world.sdf",
+      "sha256": "cbbde11dca1a1f71b4102cf5e04f7cd6396dd2c427e046c8f41c6fa28c92ab40"
+    },
+    "map": {
+      "path": "assets/scenes/inspection_world/v1/inspection_world.yaml",
+      "sha256": "9c872739becb44e3626a96f0e4a02e673a4e7806858b0b7fd9f4934cc73c6785"
+    },
+    "map_image": {
+      "path": "assets/scenes/inspection_world/v1/inspection_world.pgm",
+      "sha256": "06f0eb4a0de8a5d2676e886015b37457b6c4d142bd152ce0cb2a97a8b4a13f80"
+    },
+    "nav2_params": {
+      "path": "assets/scenes/inspection_world/v1/nav2_params.yaml",
+      "sha256": "8087b9c00967cf0b8076f9ffff3c7096d77bd479944f5a6877907d598b233603"
+    }
+  }
+}
